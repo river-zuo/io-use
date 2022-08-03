@@ -14,7 +14,7 @@ fn main() {
 
     // as_client("127.0.0.1".to_owned(), "6142".to_owned());
     
-    let addr = "127.0.0.1:6142".parse().unwrap();
+    let addr = "0.0.0.0:6142".parse().unwrap();
     let listener = TcpListener::bind(&addr).unwrap();
 
     // Here we convert the `TcpListener` to a stream of incoming connections
@@ -49,7 +49,7 @@ fn main() {
         println!("accept error = {:?}", err);
     });
 
-    println!("server running on localhost:6142");
+    println!("server running on 0.0.0.0:6142");
 
     // Start the server
     //
